@@ -1,0 +1,45 @@
+{
+    "name": "vscode-markdown-it-plugins",
+    "displayName": "vscode-markdown-it-plugins",
+    "description": "markdown-it plugin pack for VS Code",
+    "version": "0.0.1",
+    "publisher": "hiromasa",
+    "engines": {
+        "vscode": "^1.12.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [],
+    "main": "./out/src/extension",
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "contributes": {
+        "markdown.preview": {
+            "styles": [
+                "./node_modules/mermaid/dist/mermaid.css"
+                , "./node_modules/katex/dist/katex.min.css"
+            ],
+            "scripts": [
+                "./node_modules/mermaid/dist/mermaid.min.js",
+                "./oceanaut.js"
+            ]
+        },
+        "markdownit.plugins": true
+    },
+    "devDependencies": {
+        "typescript": "^2.2.1",
+        "vscode": "^1.0.0"
+    },
+    "dependencies": {
+        "mermaid": "^7.0.0",
+        "markdown-it-katex": "^2.0.3",
+        "markdown-it-emoji": "^1.3.0",
+        "markdown-it-container":  "^2.0.0",
+        "markdown-it-block-image": "^0.0.3",
+        "markdown-it-kbd": "^1.1.0"
+    }
+}

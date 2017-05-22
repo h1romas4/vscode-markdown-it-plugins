@@ -32,7 +32,9 @@
     },
     "devDependencies": {
         "typescript": "^2.2.1",
-        "vscode": "^1.0.0"
+        "vscode": "^1.0.0",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
     },
     "dependencies": {
         "mermaid": "^7.0.0",

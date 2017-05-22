@@ -11,6 +11,8 @@
 * markdown-it-container
 * markdown-it-block-image
 
+![vscode-markdown-it-plugins.png](https://raw.githubusercontent.com/h1romas4/vscode-markdown-it-plugins/master/docs/vscode-markdown-it-plugins.png)
+
 ## Requirements
 
 1. Install the [VSIX for this extension]()

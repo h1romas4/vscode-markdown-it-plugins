@@ -2,10 +2,10 @@
     "name": "vscode-markdown-it-plugins",
     "displayName": "vscode-markdown-it-plugins",
     "description": "markdown-it plugin pack for VS Code",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "hiromasa",
     "engines": {
-        "vscode": "^1.12.0"
+        "vscode": "^1.13.0"
     },
     "categories": [
         "Other"
@@ -18,16 +18,14 @@
         "postinstall": "node ./node_modules/vscode/bin/install"
     },
     "contributes": {
-        "markdown.preview": {
-            "styles": [
-                "./node_modules/mermaid/dist/mermaid.css"
-                , "./node_modules/katex/dist/katex.min.css"
-            ],
-            "scripts": [
-                "./node_modules/mermaid/dist/mermaid.min.js",
-                "./oceanaut.js"
-            ]
-        },
+        "markdown.previewStyles": [
+            "./node_modules/mermaid/dist/mermaid.css"
+            , "./node_modules/katex/dist/katex.min.css"
+        ],
+        "markdown.previewScripts": [
+            "./node_modules/mermaid/dist/mermaid.min.js",
+            "./oceanaut.js"
+        ],
         "markdownit.plugins": true
     },
     "devDependencies": {

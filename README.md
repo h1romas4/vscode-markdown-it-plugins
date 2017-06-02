@@ -15,7 +15,8 @@
 
 ## Requirements
 
-1. Install the [VSIX for this extension](https://github.com/h1romas4/vscode-markdown-it-plugins/blob/master/dest/vscode-markdown-it-plugins-0.0.1.vsix)
+0. Visual Studio Code 1.13 higher
+1. Install the [VSIX for this extension](https://github.com/h1romas4/vscode-markdown-it-plugins/blob/master/dest/vscode-markdown-it-plugins-0.0.2.vsix)
 2. Add the setting ```"markdown.enableExperimentalExtensionApi": true``` to your workspace.
 
 ## Extension Settings

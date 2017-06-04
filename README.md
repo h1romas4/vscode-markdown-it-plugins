@@ -70,6 +70,19 @@ custom container
 
 ### CSS
 
+#### .vscode/settings.json
+
+```json
+// Place your settings in this file to overwrite default and user settings.
+{
+    "markdown.styles": [
+        ".vscode/markdown-override.css"
+    ]
+}
+```
+
+#### .vscode/markdown-override.css
+
 ```css
 pre {
     /* somthing */

@@ -7,10 +7,18 @@ export function activate(context: vscode.ExtensionContext) {
             // mermaid.js
             const highlight = md.options.highlight;
             md.options.highlight = (code, lang) => {
-                if (lang && lang.toLowerCase() === 'mermaid') {
+                if(lang && lang.toLowerCase() === 'mermaid') {
                     return `<div class="mermaid">${code}</div>`;
                 }
-                return highlight(code, lang);
+                let sourceName = "";
+                if(lang) {
+                    let sp = lang.split(/(.+):(.+)/);
+                    if(sp.length > 1) {
+                        lang = sp[1];
+                        sourceName = `<div class="md-source-name">${sp[2]}</div>`;
+                    }
+                }
+                return sourceName + highlight(code, lang);
             };
             // markdown-it-katex
             md.use(require('markdown-it-katex'));

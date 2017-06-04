@@ -23,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
             const blockImage = require('markdown-it-block-image');
             md.use(blockImage, {
                 outputContainer: true,
-                containerClassName: 'md-image'
+                containerClassName: 'md-block-image'
             });
             // markdown-it-kbd
             md.use(require('markdown-it-kbd'));

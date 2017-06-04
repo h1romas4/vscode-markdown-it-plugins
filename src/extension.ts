@@ -4,19 +4,30 @@ import * as vscode from 'vscode'
 export function activate(context: vscode.ExtensionContext) {
     return {
         extendMarkdownIt(md) {
-            // mermaid.js
+            // highlight
             const highlight = md.options.highlight;
             md.options.highlight = (code, lang) => {
-                if(lang && lang.toLowerCase() === 'mermaid') {
-                    return `<div class="mermaid">${code}</div>`;
-                }
-                let sourceName = "";
-                if(lang) {
+                let name = "";
+                // parse lang:name attribute
+                if (lang) {
                     let sp = lang.split(/(.+):(.+)/);
-                    if(sp.length > 1) {
+                    if (sp.length > 1) {
                         lang = sp[1];
-                        sourceName = `<div class="md-source-name">${sp[2]}</div>`;
+                        name = sp[2];
                     }
+                }
+                // mermaid.js
+                if(lang && lang.toLowerCase() === 'mermaid') {
+                    let seqName = "";
+                    if(name !== '') {
+                        seqName = `<div class="md-sequence-name">${name}</div>`;
+                    }
+                    return seqName + `<div class="mermaid">${code}</div>`;
+                }
+                // source code
+                let sourceName = "";
+                if (name !== '') {
+                    sourceName = `<div class="md-source-name">${name}</div>`;
                 }
                 return sourceName + highlight(code, lang);
             };

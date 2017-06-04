@@ -2,6 +2,28 @@
 
 (**for testing**) markdown-it plugin pack for VS Code.
 
+## Screenshot
+
+![vscode-markdown-it-plugins.png](https://raw.githubusercontent.com/h1romas4/vscode-markdown-it-plugins/master/docs/vscode-markdown-it-plugins.png)
+
+## Requirements
+
+0. Visual Studio Code 1.13 higher
+1. Install the [VSIX for this extension](https://github.com/h1romas4/vscode-markdown-it-plugins/blob/master/dest/vscode-markdown-it-plugins-0.0.2.vsix)
+2. Add the setting ```"markdown.enableExperimentalExtensionApi": true``` to your workspace.
+
+### .vscode/settings.json
+
+```json
+// Place your settings in this file to overwrite default and user settings.
+{
+    "markdown.styles": [
+        ".vscode/markdown-override.css"
+    ],
+    "markdown.enableExperimentalExtensionApi": true
+}
+```
+
 ## Features
 
 ### Includes
@@ -12,10 +34,6 @@
 * markdown-it-kbd
 * markdown-it-container
 * markdown-it-block-image
-
-### Screenshot
-
-![vscode-markdown-it-plugins.png](https://raw.githubusercontent.com/h1romas4/vscode-markdown-it-plugins/master/docs/vscode-markdown-it-plugins.png)
 
 ### markdown code
 
@@ -70,17 +88,6 @@ custom container
 
 ### CSS
 
-#### .vscode/settings.json
-
-```json
-// Place your settings in this file to overwrite default and user settings.
-{
-    "markdown.styles": [
-        ".vscode/markdown-override.css"
-    ]
-}
-```
-
 #### .vscode/markdown-override.css
 
 ```css
@@ -120,12 +127,6 @@ code {
     /* somthing */
 }
 ```
-
-## Requirements
-
-0. Visual Studio Code 1.13 higher
-1. Install the [VSIX for this extension](https://github.com/h1romas4/vscode-markdown-it-plugins/blob/master/dest/vscode-markdown-it-plugins-0.0.2.vsix)
-2. Add the setting ```"markdown.enableExperimentalExtensionApi": true``` to your workspace.
 
 ## Extension Settings
 
